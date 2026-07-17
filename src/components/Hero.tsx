@@ -10,7 +10,7 @@ function Hero() {
           👋 Hello, I'm
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold">
+        <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Meaza Abay
         </h1>
 
@@ -37,7 +37,7 @@ function Hero() {
   href="#contact"
   className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
 >
-  Contact Me
+  Download
 </a>
         </div>
 
