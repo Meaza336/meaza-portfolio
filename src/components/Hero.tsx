@@ -1,3 +1,4 @@
+import profile from "../assets/profile.jpg";
 function Hero() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
@@ -42,11 +43,13 @@ function Hero() {
 
       </div>
 
-      {/* Right Side */}
-      <div className="w-72 h-72 rounded-full border-4 border-blue-500 flex items-center justify-center text-gray-500 text-lg">
-        Profile Photo
-      </div>
-
+      <div className="w-72 h-72">
+  <img
+    src={profile}
+    alt="Meaza Abay"
+    className="w-full h-full rounded-full object-cover border-4 border-blue-500 shadow-xl"
+  />
+</div>
     </section>
   );
 }
