@@ -33,12 +33,9 @@ function Hero() {
   View Projects
 </a>
 
-         <a
-  href="#contact"
-  className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
->
-  Download
-</a>
+ <a href="/Meaza_Abay_CV.pdf" download className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+ Download CV
+ </a>
         </div>
 
       </div>

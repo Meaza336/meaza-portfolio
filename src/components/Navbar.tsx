@@ -1,4 +1,6 @@
+import { useState } from "react"; 
 function Navbar() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <nav className="sticky top-0 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -33,9 +35,9 @@ function Navbar() {
           </li>
         </ul>
 
-        <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
-          Hire Me
-        </button>
+        <button onClick={() => setDarkMode(!darkMode)} className="bg-blue-600 text-white px-5 py-2 rounded-lg">
+          {darkMode ? "☀️ Light" : "🌙 Dark"}
+          </button>
 
       </div>
     </nav>
