@@ -1,9 +1,10 @@
+
 export const projects = [
   {
     title: "Personal Portfolio",
     description:
       "A responsive portfolio website built with React, TypeScript and Tailwind CSS.",
-    tech: "React • TypeScript • Tailwind CSS",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     github: "#",
     demo: "#",
   },

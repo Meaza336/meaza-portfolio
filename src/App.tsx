@@ -1,17 +1,31 @@
+import { useState } from "react";
 import About from "./components/About";
-import Hero from "./components/Hero"
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Skill from "./components/Skill";
-import Project from "./components/Projects"
+import Projects from "./components/Projects";
+
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <>
-     <Navbar />
-      <Hero />
-      <About />
-      <Skill />
-      <Project />
-    </>
+    <div
+      className={
+        darkMode
+          ? "bg-gray-900 text-white min-h-screen"
+          : "bg-white text-gray-900 min-h-screen"
+      }
+    >
+      <Navbar
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
+
+      <Hero darkMode={darkMode} />
+      <About darkMode={darkMode}/>
+      <Skill darkMode={darkMode}/>
+      <Projects darkMode={darkMode}/>
+    </div>
   );
 }
 

@@ -1,12 +1,15 @@
 import ProjectCard from "./ProjectCard";
-import {projects} from "../data/projects"
+import {projects} from "../data/projects";
+type ProjectsProps = {
+  darkMode: boolean;
+};
 
-function Projects() {
+function Projects({ darkMode }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto px-6 py-24"
-    >
+      className={`px-8 py-20 transition-colors duration-300 ${ darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+}`}>
       <h2 className="text-4xl font-bold mb-10">
         Projects
       </h2>
@@ -14,7 +17,7 @@ function Projects() {
     {projects.map((project) => (
    <ProjectCard
     key={project.title}
-    project={project}
+    project={{...project, tech: Array.isArray(project.tech) ? project.tech : [project.tech]}}
   />
 ))}
 </div>

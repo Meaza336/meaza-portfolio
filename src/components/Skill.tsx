@@ -1,4 +1,7 @@
-function Skills() {
+type SkillProps = {
+  darkMode: boolean;
+};
+function Skills({ darkMode }: SkillProps) {
   const frontend = [
     "React",
     "TypeScript",
@@ -26,8 +29,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-7xl mx-auto px-6 py-24"
-    >
+      className={` px-8 py-20 transition-colors duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
       <h2 className="text-4xl font-bold mb-10">
         My Skills
       </h2>

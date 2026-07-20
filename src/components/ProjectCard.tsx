@@ -1,7 +1,7 @@
 type Project = {
   title: string;
   description: string;
-  tech: string;
+  tech: string[];
   github: string;
   demo: string;
 };
@@ -21,9 +21,16 @@ function ProjectCard({ project }: ProjectCardProps) {
         {project.description}
       </p>
 
-      <p className="text-blue-600 font-semibold mb-6">
-        {project.tech}
-      </p>
+      <div className="flex flex-wrap gap-2 mb-6">
+  {project.tech.map((item) => (
+    <span
+      key={item}
+      className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium"
+    >
+      {item}
+    </span>
+  ))}
+</div>
 
       <div className="flex gap-4">
         <a

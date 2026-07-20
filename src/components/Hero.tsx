@@ -1,7 +1,14 @@
 import profile from "../assets/profile.jpg";
-function Hero() {
+type HeroProps = {
+  darkMode: boolean;
+};
+function Hero({ darkMode }: HeroProps) {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <section className={`flex justify-between items-center px-8 py-20 transition-colors duration-300 ${
+    darkMode
+      ? "bg-gray-900 text-white"
+      : "bg-white text-gray-900"
+  }`}>
 
       {/* Left Side */}
       <div className="md:w-1/2 space-y-6">
@@ -14,11 +21,15 @@ function Hero() {
           Meaza Abay
         </h1>
 
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-700">
+        <h2 className={`${
+  darkMode ? "text-blue-400" : "text-blue-600"
+}`}>
           Full-Stack Developer & AI Engineer
         </h2>
 
-        <p className="text-gray-600 leading-8">
+        <p  className={`${
+    darkMode ? "text-gray-300" : "text-gray-600"
+  }`}>
           I build responsive web applications using React,
           TypeScript, Node.js and modern AI technologies.
           My goal is to create software that solves real-world

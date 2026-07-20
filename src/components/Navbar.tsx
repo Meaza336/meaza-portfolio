@@ -1,35 +1,39 @@
-import { useState } from "react"; 
-function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+type NavbarProps = {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+function Navbar( { darkMode, setDarkMode }: NavbarProps) {
   return (
-    <nav className="sticky top-0 bg-white shadow-md">
+    <nav className={`sticky top-0 shadow-md transition-colors duration-300 ${
+        darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"}`}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <h1 className="text-2xl font-bold text-blue-600">
+        <h1  className={`text-2xl font-bold ${
+          darkMode ? "text-blue-400" : "text-blue-600"}`}>
           Meaza
         </h1>
 
         <ul className="flex gap-8 font-medium">
           <li>
-            <a href="#about" className="hover:text-blue-600 transition">
+            <a href="#about" className={`transition hover:text-blue-500 ${darkMode ? "text-gray-200" : "text-gray-700"}`}>
               About
             </a>
           </li>
 
           <li>
-            <a href="#skills" className="hover:text-blue-600 transition">
+            <a href="#skills" className={`transition hover:text-blue-500 $darkMode ? "text-gray-200" : "text-gray-700"}`}>
               Skills
             </a>
           </li>
 
           <li>
-            <a href="#projects" className="hover:text-blue-600 transition">
+            <a href="#projects" className={`transition hover:text-blue-500 ${darkMode ? "text-gray-200" : "text-gray-700"}`}>
               Projects
             </a>
           </li>
 
           <li>
-            <a href="#contact" className="hover:text-blue-600 transition">
+            <a href="#contact" className={`transition hover:text-blue-500 ${ darkMode ? "text-gray-200" : "text-gray-700"}`}>
               Contact
             </a>
           </li>
