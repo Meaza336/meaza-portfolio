@@ -1,7 +1,31 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 type ContactProps = {
   darkMode: boolean;
 };
 function Contact({ darkMode }: ContactProps) {
+    const form = useRef<HTMLFormElement>(null);
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (!form.current) return;
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      form.current?.reset();
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message.");
+    });
+};
   return (
     <section
   id="contact"
@@ -15,7 +39,8 @@ function Contact({ darkMode }: ContactProps) {
     Feel free to reach out if you'd like to work together or just say hello.
   </p>
 
-  <form className="max-w-2xl mx-auto flex flex-col gap-6">
+  <form ref={form} 
+   onSubmit={sendEmail} className="max-w-2xl mx-auto flex flex-col gap-6">
     <div>
   <label className="block mb-2 font-medium">
     Name
@@ -23,6 +48,7 @@ function Contact({ darkMode }: ContactProps) {
 
   <input
     type="text"
+     name="from_name"
     placeholder="Your name"
     className="w-full border rounded-lg px-4 py-3"
   />
@@ -34,6 +60,7 @@ function Contact({ darkMode }: ContactProps) {
 
   <input
     type="email"
+    name="from_email"
     placeholder="Your email"
     className="w-full border rounded-lg px-4 py-3"
   />
@@ -45,16 +72,17 @@ function Contact({ darkMode }: ContactProps) {
 
   <textarea
     placeholder="Your message"
+    name="message"
     className="w-full border rounded-lg px-4 py-3 h-32"
   />
 </div>
-  </form>
-  <button
+ <button
   type="submit"
   className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition mx-auto mt-6 block"
 >
   Send Message
 </button>
+  </form>
 </section>
   );
 }
