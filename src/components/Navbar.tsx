@@ -52,10 +52,24 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
           </button>
 
       </div>
-      {menuOpen && (
-  <p className="md:hidden p-4 text-center">
-    Menu is open!
-  </p>
+   {menuOpen && (
+  <ul className="md:hidden flex flex-col gap-4 px-6 py-4 bg-inherit font-medium">
+    <li>
+      <a href="#about">About</a>
+    </li>
+
+    <li>
+      <a href="#skills">Skills</a>
+    </li>
+
+    <li>
+      <a href="#projects">Projects</a>
+    </li>
+
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
 )}
     </nav>
   );
