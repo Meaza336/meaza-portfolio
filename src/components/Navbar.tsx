@@ -13,7 +13,7 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
           Meaza
         </h1>
 
-        <ul className="flex gap-8 font-medium">
+        <ul className="hidden md:flex gap-8 font-medium">
           <li>
             <a href="#about" className={`transition hover:text-blue-500 ${darkMode ? "text-gray-200" : "text-gray-700"}`}>
               About

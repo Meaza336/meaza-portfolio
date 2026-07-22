@@ -54,7 +54,7 @@ function Hero({ darkMode }: HeroProps) {
   <img
     src={profile}
     alt="Meaza Abay"
-    className="w-full h-full rounded-full object-cover border-4 border-blue-500 shadow-xl"
+    className="w-full h-full rounded-full object-cover"
   />
 </div>
     </section>
