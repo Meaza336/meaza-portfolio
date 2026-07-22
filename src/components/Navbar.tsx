@@ -1,3 +1,4 @@
+import { FaBars } from "react-icons/fa";
 type NavbarProps = {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
@@ -38,7 +39,9 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
             </a>
           </li>
         </ul>
-
+        <button className="md:hidden text-2xl">
+  <FaBars />
+</button>
         <button onClick={() => setDarkMode(!darkMode)} className="bg-blue-600 text-white px-5 py-2 rounded-lg">
           {darkMode ?  "🌙 Dark" : "☀️ Light" }
           </button>
