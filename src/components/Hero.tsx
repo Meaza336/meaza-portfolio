@@ -35,7 +35,7 @@ function Hero({ darkMode }: HeroProps) {
           problems.
         </p>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-4">
           <a
   href="#projects"
   className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
@@ -50,11 +50,11 @@ function Hero({ darkMode }: HeroProps) {
 
       </div>
 
-      <div className="w-72 h-72">
+   <div className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl">
   <img
     src={profile}
     alt="Meaza Abay"
-    className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96"
+    className="w-full h-full object-cover object-center"
   />
 </div>
     </section>
