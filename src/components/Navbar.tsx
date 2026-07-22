@@ -55,19 +55,23 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
    {menuOpen && (
   <ul className="md:hidden flex flex-col gap-4 px-6 py-4 bg-inherit font-medium">
     <li>
-      <a href="#about">About</a>
+      <a href="#about"
+  onClick={() => setMenuOpen(false)}>About</a>
     </li>
 
     <li>
-      <a href="#skills">Skills</a>
+      <a href="#skills"
+  onClick={() => setMenuOpen(false)}>Skills</a>
     </li>
 
     <li>
-      <a href="#projects">Projects</a>
+      <a href="#projects"
+  onClick={() => setMenuOpen(false)}>Projects</a>
     </li>
 
     <li>
-      <a href="#contact">Contact</a>
+      <a href="#contact"
+  onClick={() => setMenuOpen(false)}>Contact</a>
     </li>
   </ul>
 )}
