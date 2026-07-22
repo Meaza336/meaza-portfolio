@@ -52,6 +52,11 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
           </button>
 
       </div>
+      {menuOpen && (
+  <p className="md:hidden p-4 text-center">
+    Menu is open!
+  </p>
+)}
     </nav>
   );
 }
