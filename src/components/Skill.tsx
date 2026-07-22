@@ -2,29 +2,28 @@ type SkillProps = {
   darkMode: boolean;
 };
 function Skills({ darkMode }: SkillProps) {
-  const frontend = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "Tailwind CSS",
-  ];
+const frontend = [
+  "⚛️ React",
+  "🔷 TypeScript",
+  "🎨 Tailwind CSS",
+];
 
-  const backend = [
-    "Node.js",
-    "Express",
-    "REST API",
-  ];
+const backend = [
+  "🟢 Node.js",
+  "🚀 Express",
+  "🔗 REST API",
+];
 
-  const database = [
-    "SQL",
-    "MongoDB",
-  ];
+const database = [
+  "🗄️ SQL",
+  "🍃 MongoDB",
+];
 
-  const tools = [
-    "Git",
-    "GitHub",
-    "VS Code",
-  ];
+const tools = [
+  "🌿 Git",
+  "🐙 GitHub",
+  "💻 VS Code",
+];
 
   return (
     <section
