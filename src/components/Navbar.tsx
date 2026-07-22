@@ -21,7 +21,7 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
           </li>
 
           <li>
-            <a href="#skills" className={`transition hover:text-blue-500 $darkMode ? "text-gray-200" : "text-gray-700"}`}>
+            <a href="#skills" className={`transition hover:text-blue-500 ${darkMode ? "text-gray-200" : "text-gray-700"}`}>
               Skills
             </a>
           </li>
@@ -40,7 +40,7 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
         </ul>
 
         <button onClick={() => setDarkMode(!darkMode)} className="bg-blue-600 text-white px-5 py-2 rounded-lg">
-          {darkMode ? "☀️ Light" : "🌙 Dark"}
+          {darkMode ?  "🌙 Dark" : "☀️ Light" }
           </button>
 
       </div>

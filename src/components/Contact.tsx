@@ -42,7 +42,7 @@ function Contact({ darkMode }: ContactProps) {
   <form ref={form} 
    onSubmit={sendEmail} className="max-w-2xl mx-auto flex flex-col gap-6">
     <div>
-  <label className="block mb-2 font-medium">
+  <label className="block mb-2 text-blue-600 font-medium">
     Name
   </label>
 
@@ -54,7 +54,7 @@ function Contact({ darkMode }: ContactProps) {
   />
 </div>
 <div>
-  <label className="block mb-2 font-medium">
+  <label className="block mb-2 text-blue-600 font-medium">
     Email
   </label>
 
@@ -66,7 +66,7 @@ function Contact({ darkMode }: ContactProps) {
   />
 </div>
 <div>
-  <label className="block mb-2 font-medium">
+  <label className="block mb-2 text-blue-600  font-medium">
     Message
   </label>
 
