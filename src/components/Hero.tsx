@@ -4,7 +4,7 @@ type HeroProps = {
 };
 function Hero({ darkMode }: HeroProps) {
   return (
-    <section className={`flex justify-between items-center px-8 py-20 transition-colors duration-300 ${
+    <section   className={`flex flex-col-reverse md:flex-row justify-between items-center gap-12 px-6 md:px-8 py-20 transition-colors duration-300 ${
     darkMode
       ? "bg-gray-900 text-white"
       : "bg-white text-gray-900"
@@ -54,7 +54,7 @@ function Hero({ darkMode }: HeroProps) {
   <img
     src={profile}
     alt="Meaza Abay"
-    className="w-full h-full rounded-full object-cover"
+    className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96"
   />
 </div>
     </section>
