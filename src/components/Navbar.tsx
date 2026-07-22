@@ -1,9 +1,11 @@
 import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 type NavbarProps = {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
 function Navbar( { darkMode, setDarkMode }: NavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className={`sticky top-0 shadow-md transition-colors duration-300 ${
         darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"}`}>
@@ -39,7 +41,10 @@ function Navbar( { darkMode, setDarkMode }: NavbarProps) {
             </a>
           </li>
         </ul>
-        <button className="md:hidden text-2xl">
+        <button
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="md:hidden text-2xl"
+>
   <FaBars />
 </button>
         <button onClick={() => setDarkMode(!darkMode)} className="bg-blue-600 text-white px-5 py-2 rounded-lg">
