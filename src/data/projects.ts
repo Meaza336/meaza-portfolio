@@ -24,4 +24,20 @@ export const projects = [
     github: "#",
     demo: "#",
   },
+   {
+    title: "Travel App",
+    description:
+      "A Mobile App dvelope using flutter and dart for travel information and discovering new places",
+    tech: "Flutter • Dart • Firebase",
+    github: "#",
+    demo: "#",
+  },
+   {
+  title: "Organ donation System",
+    description:
+      "A website based at hospitals and ministery of health office to rigister and manage organ donation",
+    tech: "Next.js • node.js• Mongodb",
+    github: "#",
+    demo: "#",
+  },
 ];

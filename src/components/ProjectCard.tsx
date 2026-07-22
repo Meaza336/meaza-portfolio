@@ -13,7 +13,7 @@ type ProjectCardProps = {
 function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="border rounded-xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-      <h3 className="text-2xl font-bold">
+      <h3 className="text-2xl text-blue-600 font-bold">
         {project.title}
       </h3>
 

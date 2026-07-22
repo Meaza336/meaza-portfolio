@@ -30,7 +30,7 @@ function Skills({ darkMode }: SkillProps) {
     <section
       id="skills"
       className={` px-8 py-20 transition-colors duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
-      <h2 className="text-4xl font-bold mb-10">
+      <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-10">
         My Skills
       </h2>
 
@@ -38,7 +38,7 @@ function Skills({ darkMode }: SkillProps) {
 
         {/* Frontend */}
         <div className="border rounded-xl p-6 shadow">
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2xl text-blue-600 font-semibold mb-4">
             Frontend
           </h3>
 
@@ -51,7 +51,7 @@ function Skills({ darkMode }: SkillProps) {
 
         {/* Backend */}
         <div className="border rounded-xl p-6 shadow">
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2xl text-blue-600 font-semibold mb-4">
             Backend
           </h3>
 
@@ -64,7 +64,7 @@ function Skills({ darkMode }: SkillProps) {
 
         {/* Database */}
         <div className="border rounded-xl p-6 shadow">
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2xl text-blue-600 font-semibold mb-4">
             Database
           </h3>
 
@@ -77,7 +77,7 @@ function Skills({ darkMode }: SkillProps) {
 
         {/* Tools */}
         <div className="border rounded-xl p-6 shadow">
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2xl text-blue-600 font-semibold mb-4">
             Tools
           </h3>
 

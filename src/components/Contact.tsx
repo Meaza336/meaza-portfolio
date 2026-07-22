@@ -31,7 +31,7 @@ function Contact({ darkMode }: ContactProps) {
   id="contact"
     className={`px-8 py-20 transition-colors duration-300 ${ darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900" }`}
 >
-  <h2 className="text-4xl font-bold mb-4">
+  <h2 className="text-4xl md:text-5xl mb-8 font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
     Contact Me
   </h2>
 

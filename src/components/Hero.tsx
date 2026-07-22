@@ -22,8 +22,7 @@ function Hero({ darkMode }: HeroProps) {
         </h1>
 
         <h2 className={`${
-  darkMode ? "text-blue-400" : "text-blue-600"
-}`}>
+  darkMode ? "text-blue-400" : "text-blue-600"}`}>
           Full-Stack Developer & AI Engineer
         </h2>
 
