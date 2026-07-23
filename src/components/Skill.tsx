@@ -1,28 +1,44 @@
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
+  FaDatabase,
+} from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
 type SkillProps = {
   darkMode: boolean;
 };
 function Skills({ darkMode }: SkillProps) {
 const frontend = [
-  "⚛️ React",
-  "🔷 TypeScript",
-  "🎨 Tailwind CSS",
+  { name: "React", icon: FaReact },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
 ];
 
 const backend = [
-  "🟢 Node.js",
-  "🚀 Express",
-  "🔗 REST API",
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Express", icon: SiExpress },
+  { name: "REST API", icon: FaDatabase }, // Placeholder icon
 ];
 
 const database = [
-  "🗄️ SQL",
-  "🍃 MongoDB",
+  { name: "SQL", icon: FaDatabase },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "posgreSQL", icon: FaDatabase}
 ];
 
 const tools = [
-  "🌿 Git",
-  "🐙 GitHub",
-  "💻 VS Code",
+  { name: "Git", icon: FaGitAlt },
+  { name: "GitHub", icon: FaGithub },
+  { name: "VS Code", icon: FaCode }
 ];
 
   return (
@@ -41,11 +57,16 @@ const tools = [
             Frontend
           </h3>
 
-          <ul className="space-y-2">
-            {frontend.map((skill) => (
-              <li key={skill}>• {skill}</li>
-            ))}
-          </ul>
+          {frontend.map((skill) => {
+  const Icon = skill.icon;
+
+  return (
+    <li key={skill.name} className="flex items-center gap-3">
+      <Icon className="text-blue-500 text-xl" />
+      <span>{skill.name}</span>
+    </li>
+  );
+})}
         </div>
 
         {/* Backend */}
@@ -54,11 +75,16 @@ const tools = [
             Backend
           </h3>
 
-          <ul className="space-y-2">
-            {backend.map((skill) => (
-              <li key={skill}>• {skill}</li>
-            ))}
-          </ul>
+        {backend.map((skill) => {
+  const Icon = skill.icon;
+
+  return (
+    <li key={skill.name} className="flex items-center gap-3">
+      <Icon className="text-blue-500 text-xl" />
+      <span>{skill.name}</span>
+    </li>
+  );
+})}
         </div>
 
         {/* Database */}
@@ -67,11 +93,16 @@ const tools = [
             Database
           </h3>
 
-          <ul className="space-y-2">
-            {database.map((skill) => (
-              <li key={skill}>• {skill}</li>
-            ))}
-          </ul>
+        {database.map((skill) => {
+  const Icon = skill.icon;
+
+  return (
+    <li key={skill.name} className="flex items-center gap-3">
+      <Icon className="text-blue-500 text-xl" />
+      <span>{skill.name}</span>
+    </li>
+  );
+})}
         </div>
 
         {/* Tools */}
@@ -80,11 +111,16 @@ const tools = [
             Tools
           </h3>
 
-          <ul className="space-y-2">
-            {tools.map((skill) => (
-              <li key={skill}>• {skill}</li>
-            ))}
-          </ul>
+       {tools.map((skill) => {
+  const Icon = skill.icon;
+
+  return (
+    <li key={skill.name} className="flex items-center gap-3">
+      <Icon className="text-blue-500 text-xl" />
+      <span>{skill.name}</span>
+    </li>
+  );
+})}
         </div>
 
       </div>
