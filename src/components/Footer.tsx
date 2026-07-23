@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 function Footer() {
   return (
     <footer className="border-t border-gray-700 py-8">
@@ -7,32 +8,19 @@ function Footer() {
           © {new Date().getFullYear()} Meaza Tessema. All rights reserved.
         </p>
 
-        <div className="flex gap-6">
-          <a
-            href="https://github.com/Meaza336"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
-          >
-            GitHub
-          </a>
+<div className="flex gap-6 text-2xl">
+  <a href="https://github.com/Meaza336">
+    <FaGithub />
+  </a>
 
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 transition"
-          >
-            LinkedIn
-          </a>
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">
+    <FaLinkedin />
+  </a>
 
-          <a
-            href="mailto:meazatessema78@gmail.com"
-            className="hover:text-blue-400 transition"
-          >
-            Email
-          </a>
-        </div>
+  <a href="mailto:meazatessema78@gmail.com">
+    <FaEnvelope />
+  </a>
+</div>
 
         <p className="text-gray-500 text-sm">
           Built with React, TypeScript & Tailwind CSS
