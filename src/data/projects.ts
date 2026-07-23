@@ -5,7 +5,7 @@ export const projects = [
     description:
       "A responsive portfolio website built with React, TypeScript and Tailwind CSS.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
-    github: "#",
+    github: "https://github.com/Meaza336/meaza-portfolio",
     demo: "#",
   },
   {
@@ -13,7 +13,7 @@ export const projects = [
     description:
       "A full-stack task management application with user authentication.",
     tech: "React • Node.js • Express • MongoDB",
-    github: "#",
+    github: "https://github.com/Meaza336/task-manager-frontend",
     demo: "#",
   },
   {
@@ -29,7 +29,7 @@ export const projects = [
     description:
       "A Mobile App dvelope using flutter and dart for travel information and discovering new places",
     tech: "Flutter • Dart • Firebase",
-    github: "#",
+    github: "https://github.com/Meaza336/ethio-explore",
     demo: "#",
   },
    {
@@ -37,7 +37,7 @@ export const projects = [
     description:
       "A website based at hospitals and ministery of health office to rigister and manage organ donation",
     tech: "Next.js • node.js• Mongodb",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Meaza336/organ-matching-system",
+    demo: "https://github.com/Meaza336/organ-matching-system",
   },
 ];
